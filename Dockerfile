@@ -2,7 +2,9 @@
 FROM node:lts-alpine3.13
 
 RUN apk add dumb-init
-ENV NODE_ENV production
+ARG SERVER_ENV
+
+ENV NODE_ENV $SERVER_ENV
 
 WORKDIR /usr/src/app
 COPY --chown=node:node . /usr/src/app

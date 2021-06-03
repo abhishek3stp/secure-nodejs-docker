@@ -3,6 +3,6 @@ Best practices to containerize Node.js web applications with Docker
 
 For creating image
 ```javascript
-docker build . -t secure-nodejs
+docker build . -t secure-nodejs --build-arg DEV_ENV=production
 docker run -p 3000:3000 secure-nodejs
 ```
